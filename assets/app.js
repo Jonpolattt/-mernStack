@@ -95,3 +95,22 @@
 
 
 
+// // // // // // /// //// //// 6 DARS MASALA // /// // /// // // /// /// // / // 
+
+const numberOfSeries = +prompt("Nechta seria kordingiz?", "");
+
+const seriesDB = {
+    count: numberOfSeries,
+    series: {},
+    actors: {},
+    geners: [],
+    privat: false,
+};
+
+const lastMovie = prompt("Oxirgi korgan serialingiz?", "")
+const raiting = prompt("Nechi baho berasiz?", "")
+
+seriesDB.series[lastMovie] = raiting
+
+ 
+console.log(seriesDB);
