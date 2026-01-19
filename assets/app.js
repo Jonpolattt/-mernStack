@@ -51,7 +51,7 @@
 
 // 5 dars
 
-// alert("Hello world")
+// alert("Jonpolat + Ttthmn")
 
 // const isAccess = confirm("Are you above 18 age")
 // console.log(isAccess);
@@ -108,9 +108,9 @@
 //   console.log("Munkun");
 // }
 
-const age = 18;
+// const age = 18;
 
-age < 18 ? console.log("Kirovir") : console.log("San xali kichkina san ");
+// age < 18 ? console.log("Kirovir") : console.log("San xali kichkina san ");
 
 // switch (trafficLight) {
 //   case "green":
