@@ -108,6 +108,10 @@
 //   console.log("Munkun");
 // }
 
+const age = 18;
+
+age < 18 ? console.log("Kirovir") : console.log("San xali kichkina san ");
+
 // switch (trafficLight) {
 //   case "green":
 //     console.log("Goooo");
@@ -122,4 +126,24 @@
 //     console.log("Uyoq buyoqa qarab utip ketovir");
 
 //     break;
+// }
+
+// // // // // // // // // // // // Tsikil
+// let number = 1;
+
+// while (number <= 5) {
+//     console.log(number);
+//     number++
+// }
+
+// do {
+//     console.log(number);
+//     number++
+// } while (number <= 5)
+
+// for (number; number <= 5; number++) {
+//   if (number === 2) {
+//     // break
+//     continue;
+//   }
 // }
