@@ -49,8 +49,7 @@
 
 // const colors = ["black", 22, true, {}]
 
-
-// 5 dars 
+// 5 dars
 
 // alert("Hello world")
 
@@ -72,15 +71,13 @@
 // let x = 6
 // let y = 3
 
-
-// // Postfix 
+// // Postfix
 // x++
-// y-- 
+// y--
 
 // // Prefix
 // ++x
 // --y
-
 
 // console.log(x);
 // console.log(y);
@@ -92,6 +89,37 @@
 
 // console.log(isFamaliy);
 
+// Shartli operator
 
+// const trafficLight = "";
 
+// if (trafficLight == "red") {
+//   console.log("Stop!");
+// } else if (trafficLight == "yellow") {
+//   console.log("Tayorlan");
+// } else if (trafficLight == "green") {
+//   console.log("gooooo");
+// }
 
+// const age = +prompt("How old are you?", "");
+// if (age < 18) {
+//   console.log("not accuses");
+// } else {
+//   console.log("Munkun");
+// }
+
+// switch (trafficLight) {
+//   case "green":
+//     console.log("Goooo");
+//     break;
+//   case "yellow":
+//     console.log("tayorlaning");
+//     break;
+//   case "red":
+//     console.log("Stopppppp!");
+//     break;
+//   default:
+//     console.log("Uyoq buyoqa qarab utip ketovir");
+
+//     break;
+// }
