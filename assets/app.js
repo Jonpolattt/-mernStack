@@ -194,3 +194,5 @@ console.log(`Textni kichkina xarifga utkazish ${text.toLowerCase()}`);
 console.log(`1#. Matindi Kesich: ${text.slice(0, 4)}`);
 console.log(`2#. Matindi Kesich: ${text.substring(0, 4)}`);
 console.log(`Ikki tarafdan bo'sh space olib tashlash: ${password.trim()}`);
+console.log(`Boshidan bo'sh space olib tashlash: ${password.trimStart()}`);
+console.log(`Oxiridan bo'sh space olib tashlash: ${password.trimEnd()}`);
