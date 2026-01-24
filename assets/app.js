@@ -26,3 +26,7 @@ if (seriesDB.count < 5) {
   console.log("Siz serialchi zvezda ekan siz");
 }
 console.log(seriesDB);
+
+
+console.log("uzimdi uzim aldab push qilip yotipman");
+
