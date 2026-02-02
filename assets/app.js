@@ -197,3 +197,23 @@
 // console.log(`Boshidan bo'sh space olib tashlash: ${password.trimStart()}`);
 // console.log(`Oxiridan bo'sh space olib tashlash: ${password.trimEnd()}`);
 
+// 12 dars Callback va Objectlar destruktizasiya
+
+// function greeting(callback) {
+//   console.log("Hello world!");
+//   callback();
+// }
+
+// greeting(function ()  { // or ()=>
+//   console.log("Are you ready today");
+// });
+
+// function greeting(callback) {
+//   console.log("Hello world!");
+//   callback();
+// }
+
+// function callback() {
+//   console.log("Are you ready today");
+// }
+// greeting(callback)
