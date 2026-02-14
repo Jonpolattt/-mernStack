@@ -218,17 +218,22 @@
 // }
 // greeting(callback)
 
-
 const person = {
-	name: "Jonpolat",
-	year: 2007,
-	job: "fronted developer",
-	hobbies: {
-		sprort: "boxing",
-		games: "chess",
-	}
-}
+  name: "Jonpolat",
+  year: 2007,
+  job: "fronted developer",
+  hobbies: {
+    sprort: "boxing",
+    games: "chess",
+  },
+};
 
 for (let key in person) {
-	console.log(key);
+  if (typeof person[key] === "object") {
+    for (let i in person[key]) {
+      console.log(`Property: ${i}, Value: ${person[key][i]}`);
+    }
+  } else {
+    console.log(`Property: ${key}, Value: ${person[key]}`);
+  }
 }
