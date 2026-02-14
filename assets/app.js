@@ -218,22 +218,34 @@
 // }
 // greeting(callback)
 
-const person = {
-  name: "Jonpolat",
-  year: 2007,
-  job: "fronted developer",
-  hobbies: {
-    sprort: "boxing",
-    games: "chess",
-  },
-};
+// const person = {
+//   name: "Jonpolat",
+//   year: 2007,
+//   job: "fronted developer",
+//   hobbies: {
+//     sprort: "boxing",
+//     games: "chess",
+//   },
+//   sayHello: function () {
+//     console.log(`Hello ${this.name}`);
+    
+//   }
+// };
 
-for (let key in person) {
-  if (typeof person[key] === "object") {
-    for (let i in person[key]) {
-      console.log(`Property: ${i}, Value: ${person[key][i]}`);
-    }
-  } else {
-    console.log(`Property: ${key}, Value: ${person[key]}`);
-  }
-}
+
+// const {year, job, name, sayHello, hobbies: {games, sprort}} = person
+
+// console.log(Object.keys(person).length)
+
+// for in faqat object uchun
+// for (let key in person) {
+//   if (typeof person[key] === "object") {
+//     for (let i in person[key]) {
+//       console.log(`Property: ${i}, Value: ${person[key][i]}`);
+//     }
+//   } else {
+//     console.log(`Property: ${key}, Value: ${person[key]}`);
+//   }
+// }
+
+
