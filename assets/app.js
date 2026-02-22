@@ -228,10 +228,9 @@
 //   },
 //   sayHello: function () {
 //     console.log(`Hello ${this.name}`);
-    
+
 //   }
 // };
-
 
 // const {year, job, name, sayHello, hobbies: {games, sprort}} = person
 
@@ -248,15 +247,38 @@
 //   }
 // }
 
+// Massivlar
 
-
-
-// Massivlar 
-
-const colors = ['red', 'blue', 'black', 'yellow', 'green']
-console.log('Massiv uzunligi:', colors.length);
+const colors = ["red", "blue", "black", "yellow", "green"];
+console.log("Massiv uzunligi:", colors.length);
 console.log(`Index yordamida element olish: ${colors[2]}`);
 
-// Pop - arrayni oxiriga yangi element qoshadi
-// Push - arrayni oxiriga yangi element qoshadi
+// Pop - arrayni oxirigi elementini ochiradi
+console.log("Massivdi oxirigi elemtini ochirish" + colors.pop());
 
+// Push - arrayni oxiriga yangi element qoshadi
+console.log("Massivdi oxiriga yangi element qoshadi" + colors.push("brown"));
+
+// Shift - arrayni boshidan element ochirish
+console.log(`Oldidagi elementi ochirish: ${colors.shift()}`);
+
+// UnShift - arrayni boshiga yangi element qoshadi
+console.log(`Arrayni oldiga yangi element qoshish: ${colors.unshift("gray")}`);
+
+console.log(colors);
+
+const cars = ["merc", "bmw", "audi", "suzuki", "subaro"];
+// Itteratsiya
+// for (let i = 0; i < cars.length; i++) {
+//   console.log(cars[i]);
+// }
+
+// // for of 
+// for (let car of cars) {
+//     console.log(car);
+// }
+
+// For each
+// cars.forEach((item, idnex, arr) => {
+//     console.log(`${idnex}: ${item} in array ${arr}`);
+// })
