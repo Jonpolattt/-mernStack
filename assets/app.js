@@ -273,7 +273,7 @@ const cars = ["merc", "bmw", "audi", "suzuki", "subaro"];
 //   console.log(cars[i]);
 // }
 
-// // for of 
+// // for of
 // for (let car of cars) {
 //     console.log(car);
 // }
@@ -282,3 +282,23 @@ const cars = ["merc", "bmw", "audi", "suzuki", "subaro"];
 // cars.forEach((item, idnex, arr) => {
 //     console.log(`${idnex}: ${item} in array ${arr}`);
 // })
+
+// Split
+const socialMedia = "Youtube, Telegram, Instagram";
+const arr = socialMedia.split(", ");
+// Join
+const text = arr.join("-");
+console.log(text);
+
+// Sort method - arrayni sartirovka qilib beradi, elementni faqat birinchi harifini oladi va string korinishida tekshiradi
+cars.sort();
+console.log(cars);
+
+const n = [23, 78, 12, 43, 56, 5];
+n.sort(compareNum);
+
+function compareNum(a, b) {
+  return a - b;
+}
+
+console.log(n);
