@@ -249,3 +249,14 @@
 // }
 
 
+
+
+// Massivlar 
+
+const colors = ['red', 'blue', 'black', 'yellow', 'green']
+console.log('Massiv uzunligi:', colors.length);
+console.log(`Index yordamida element olish: ${colors[2]}`);
+
+// Pop - arrayni oxiriga yangi element qoshadi
+// Push - arrayni oxiriga yangi element qoshadi
+
