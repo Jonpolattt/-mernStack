@@ -319,13 +319,35 @@ console.log(b);
 const person = {
   name: "Jonpolat",
   age: 18,
+  hobbies: {
+    game: "Ufc",
+    sport: "football",
+  },
 };
 
-const secondPerson = person
+// const secondPerson = person
 
-secondPerson.name = "Tahmina" // birinchi obeject xam uzgaradi bunaqa clonslash xato
-secondPerson.age = 17;
+// secondPerson.name = "Tahmina" // birinchi obeject xam uzgaradi bunaqa clonslash xato
+// secondPerson.age = 17;
 
-console.log(person);
-console.log(secondPerson);
+// console.log(person);
+// console.log(secondPerson);
 
+// #1. Iteratsiya (for in) Yuzaki clonlash
+// const copyObj = (obj) => {
+//   const clone = {};
+
+//   for (let key in obj) {
+//     clone[key] = obj[key];
+//   }
+
+//   return clone
+// };
+
+// const secondPerson = copyObj(person);
+
+// secondPerson.name = "Tahmina";
+// secondPerson.age = 17;
+
+// console.log(person);
+// console.log(secondPerson);
