@@ -249,56 +249,83 @@
 
 // Massivlar
 
-const colors = ["red", "blue", "black", "yellow", "green"];
-console.log("Massiv uzunligi:", colors.length);
-console.log(`Index yordamida element olish: ${colors[2]}`);
+// const colors = ["red", "blue", "black", "yellow", "green"];
+// console.log("Massiv uzunligi:", colors.length);
+// console.log(`Index yordamida element olish: ${colors[2]}`);
 
-// Pop - arrayni oxirigi elementini ochiradi
-console.log("Massivdi oxirigi elemtini ochirish" + colors.pop());
+// // Pop - arrayni oxirigi elementini ochiradi
+// console.log("Massivdi oxirigi elemtini ochirish" + colors.pop());
 
-// Push - arrayni oxiriga yangi element qoshadi
-console.log("Massivdi oxiriga yangi element qoshadi" + colors.push("brown"));
+// // Push - arrayni oxiriga yangi element qoshadi
+// console.log("Massivdi oxiriga yangi element qoshadi" + colors.push("brown"));
 
-// Shift - arrayni boshidan element ochirish
-console.log(`Oldidagi elementi ochirish: ${colors.shift()}`);
+// // Shift - arrayni boshidan element ochirish
+// console.log(`Oldidagi elementi ochirish: ${colors.shift()}`);
 
-// UnShift - arrayni boshiga yangi element qoshadi
-console.log(`Arrayni oldiga yangi element qoshish: ${colors.unshift("gray")}`);
+// // UnShift - arrayni boshiga yangi element qoshadi
+// console.log(`Arrayni oldiga yangi element qoshish: ${colors.unshift("gray")}`);
 
-console.log(colors);
+// console.log(colors);
 
-const cars = ["merc", "bmw", "audi", "suzuki", "subaro"];
-// Itteratsiya
-// for (let i = 0; i < cars.length; i++) {
-//   console.log(cars[i]);
+// const cars = ["merc", "bmw", "audi", "suzuki", "subaro"];
+// // Itteratsiya
+// // for (let i = 0; i < cars.length; i++) {
+// //   console.log(cars[i]);
+// // }
+
+// // // for of
+// // for (let car of cars) {
+// //     console.log(car);
+// // }
+
+// // For each
+// // cars.forEach((item, idnex, arr) => {
+// //     console.log(`${idnex}: ${item} in array ${arr}`);
+// // })
+
+// // Split
+// const socialMedia = "Youtube, Telegram, Instagram";
+// const arr = socialMedia.split(", ");
+// // Join
+// const text = arr.join("-");
+// console.log(text);
+
+// // Sort method - arrayni sartirovka qilib beradi, elementni faqat birinchi harifini oladi va string korinishida tekshiradi
+// cars.sort();
+// console.log(cars);
+
+// const n = [23, 78, 12, 43, 56, 5];
+// n.sort(compareNum);
+
+// function compareNum(a, b) {
+//   return a - b;
 // }
 
-// // for of
-// for (let car of cars) {
-//     console.log(car);
-// }
+// console.log(n);
 
-// For each
-// cars.forEach((item, idnex, arr) => {
-//     console.log(`${idnex}: ${item} in array ${arr}`);
-// })
+// 14 dars
 
-// Split
-const socialMedia = "Youtube, Telegram, Instagram";
-const arr = socialMedia.split(", ");
-// Join
-const text = arr.join("-");
-console.log(text);
+// Primitiv
+let a = 10,
+  b = a;
 
-// Sort method - arrayni sartirovka qilib beradi, elementni faqat birinchi harifini oladi va string korinishida tekshiradi
-cars.sort();
-console.log(cars);
+b = b + 10;
 
-const n = [23, 78, 12, 43, 56, 5];
-n.sort(compareNum);
+console.log(a);
+console.log(b);
 
-function compareNum(a, b) {
-  return a - b;
-}
+// Object
 
-console.log(n);
+const person = {
+  name: "Jonpolat",
+  age: 18,
+};
+
+const secondPerson = person
+
+secondPerson.name = "Tahmina" // birinchi obeject xam uzgaradi bunaqa clonslash xato
+secondPerson.age = 17;
+
+console.log(person);
+console.log(secondPerson);
+
