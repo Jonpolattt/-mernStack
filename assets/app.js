@@ -306,24 +306,24 @@
 // 14 dars
 
 // Primitiv
-let a = 10,
-  b = a;
+// let a = 10,
+//   b = a;
 
-b = b + 10;
+// b = b + 10;
 
-console.log(a);
-console.log(b);
+// console.log(a);
+// console.log(b);
 
-// Object
+// // Object
 
-const person = {
-  name: "Jonpolat",
-  age: 18,
-  hobbies: {
-    game: "Ufc",
-    sport: "football",
-  },
-};
+// const person = {
+//   name: "Jonpolat",
+//   age: 18,
+//   hobbies: {
+//     game: "Ufc",
+//     sport: "football",
+//   },
+// };
 
 // const secondPerson = person
 
@@ -373,23 +373,39 @@ const person = {
 // Array clonlash
 
 // #1 Slice method yordamida
-const cars = ["audi", "bmw", "porshe", "hyundai"];
-const clone = cars.splice();
-clone.push("Merc");
+// const cars = ["audi", "bmw", "porshe", "hyundai"];
+// const clone = cars.splice();
+// clone.push("Merc");
 
-console.log(cars);
-console.log(clone);
+// console.log(cars);
+// console.log(clone);
 
-// #2 Spread
-const copy = [...cars];
-console.log(copy);
+// // #2 Spread
+// const copy = [...cars];
+// console.log(copy);
 
-function log(a, b, c) {
-  console.log(a);
-  console.log(b);
-  console.log(c);
-}
+// function log(a, b, c) {
+//   console.log(a);
+//   console.log(b);
+//   console.log(c);
+// }
 
-const arr = [10, 20, 30];
+// const arr = [10, 20, 30];
 
-log(...arr); // 10, 20, 30
+// log(...arr); // 10, 20, 30
+
+// // // // // // // //  OOP asoslari
+const suvCars = {
+  weight: 1000,
+  lenght: 3,
+  speed: () => {
+    console.log("100km/h");
+  },
+};
+
+const nexia = Object.create(suvCars)
+const matiz = Object.create(suvCars)
+
+// nexia.__proto__ = suvCars // eski ususli
+
+Object.setPrototypeOf(nexia, suvCars)
