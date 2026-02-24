@@ -351,3 +351,45 @@ const person = {
 
 // console.log(person);
 // console.log(secondPerson);
+
+// #2. Object assign
+// const secondPerson = Object.assign({isLoveMe: true}, person);
+
+// secondPerson.name = "Tahmina";
+// secondPerson.age = 17;
+
+// console.log(person);
+// console.log(secondPerson);
+
+// // // // // // // // // // // // #3. Srpead Operatori ES8
+// const secondPerson = {...person}
+
+// secondPerson.name = "Tahmina";
+// secondPerson.age = 17;
+
+// console.log(person);
+// console.log(secondPerson);
+
+// Array clonlash
+
+// #1 Slice method yordamida
+const cars = ["audi", "bmw", "porshe", "hyundai"];
+const clone = cars.splice();
+clone.push("Merc");
+
+console.log(cars);
+console.log(clone);
+
+// #2 Spread
+const copy = [...cars];
+console.log(copy);
+
+function log(a, b, c) {
+  console.log(a);
+  console.log(b);
+  console.log(c);
+}
+
+const arr = [10, 20, 30];
+
+log(...arr); // 10, 20, 30
