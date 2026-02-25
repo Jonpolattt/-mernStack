@@ -395,17 +395,86 @@
 // log(...arr); // 10, 20, 30
 
 // // // // // // // //  OOP asoslari
-const suvCars = {
-  weight: 1000,
-  lenght: 3,
-  speed: () => {
-    console.log("100km/h");
-  },
+// const suvCars = {
+//   weight: 1000,
+//   lenght: 3,
+//   speed: () => {
+//     console.log("100km/h");
+//   },
+// };
+
+// const nexia = Object.create(suvCars)
+// const matiz = Object.create(suvCars)
+
+// // nexia.__proto__ = suvCars // eski ususli
+
+// Object.setPrototypeOf(nexia, suvCars)
+
+
+// // /// // // / // / / /16 OOP amaliyot
+let numberOfSeries;
+
+startApp();
+
+const seriesDB = {
+  count: 0,
+  series: {},
+  actors: {},
+  geners: [],
+  privat: false,
+  start: function () {
+    
+  }
 };
 
-const nexia = Object.create(suvCars)
-const matiz = Object.create(suvCars)
+setFavoriteSeries();
+detectingLevel();
+writeGenres();
+showDb(seriesDB.privat);
 
-// nexia.__proto__ = suvCars // eski ususli
+function startApp() {
+  while (
+    numberOfSeries == "" ||
+    numberOfSeries == null ||
+    isNaN(numberOfSeries)
+  ) {
+    numberOfSeries = +prompt("Nechta serial kordingiz?", "");
+  }
+}
 
-Object.setPrototypeOf(nexia, suvCars)
+function setFavoriteSeries() {
+  for (let i = 0; i < 2; i++) {
+    const a = prompt(`Oxirgi korgan serialingiz ${i}?`, "");
+    const b = prompt(`Nechi baho berasiz ${i}?`, "");
+    if (a !== null && a !== "" && b !== null && b !== "") {
+      seriesDB.series[a] = b;
+    } else {
+      i--;
+    }
+  }
+}
+
+function detectingLevel() {
+  if (seriesDB.count < 5) {
+    console.log("Siz kam serial koripsiz");
+  } else if (seriesDB.count >= 5 && seriesDB.count < 9) {
+    console.log("Siz classik tomoshabil");
+  } else if (seriesDB.count >= 10) {
+    console.log("Siz serialchi zvezda ekan siz");
+  }
+}
+
+function writeGenres() {
+  for (let i = 1; i < 4; i++) {
+    const genre = prompt(`Yaxshi ko'rgan janiringiz ${i}?`, "");
+    seriesDB.geners[i] = genre;
+  }
+}
+
+function showDb(isPrivat) {
+  if (!isPrivat) {
+    console.log(seriesDB);
+  } else {
+    console.log("Siz bu yerga kiraolmeysiz");
+  }
+}
