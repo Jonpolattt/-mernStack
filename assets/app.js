@@ -412,69 +412,80 @@
 
 
 // // /// // // / // / / /16 OOP amaliyot
-let numberOfSeries;
-
-startApp();
-
 const seriesDB = {
-  count: 0,
-  series: {},
-  actors: {},
-  geners: [],
-  privat: false,
-  start: function () {
-    
-  }
-};
+	count: 0,
+	series: {},
+	actors: {},
+	genres: [],
+	private: false,
+	start: function () {
+		seriesDB.count = +prompt('Nechta serial ko’rdingiz?', '')
 
-setFavoriteSeries();
-detectingLevel();
-writeGenres();
-showDb(seriesDB.privat);
+		while (
+			seriesDB.count == '' ||
+			seriesDB.count == null ||
+			isNaN(seriesDB.count)
+		) {
+			seriesDB.count = +prompt('Nechta serial ko’rdingiz?', '')
+		}
+	},
+	setSeries: function () {
+		for (let i = 0; i < 2; i++) {
+			const a = prompt(`Oxirgi ko’rgan serialingiz ${i + 1}?`, '')
+			const b = prompt(`Nechi baxo berasiz? ${i + 1}`, '')
 
-function startApp() {
-  while (
-    numberOfSeries == "" ||
-    numberOfSeries == null ||
-    isNaN(numberOfSeries)
-  ) {
-    numberOfSeries = +prompt("Nechta serial kordingiz?", "");
-  }
-}
+			if (a !== null && b !== null && a !== '' && b !== '') {
+				seriesDB.series[a] = b
+			} else {
+				i--
+			}
+		}
+	},
+	detectingLevel: function () {
+		if (seriesDB.count < 5) {
+			console.log("Kam serial ko'ripsiz")
+		} else if (seriesDB.count >= 5 && seriesDB.count < 10) {
+			console.log('Siz classik tamoshabin ekansiz')
+		} else if (seriesDB.count >= 10) {
+			console.log('Siz serialchi zvezda ekansiz')
+		}
+	},
+	visibleDB: function () {
+		if (seriesDB.private) {
+			seriesDB.private = false
+		} else {
+			seriesDB.private = true
+		}
+	},
+	showDB: function () {
+		if (!seriesDB.private) {
+			console.log(seriesDB)
+		} else {
+			console.log("Ma'lumot mahfiy saqlanmoqda")
+		}
+	},
+	writeGenres: function () {
+		// for (let i = 0; i < 3; i++) {
+		// 	const genre = prompt(`Yaxshi ko'rgan janringiz ${i + 1}?`, '')
+		// 	if (genre === '' || genre === null) {
+		// 		i--
+		// 	} else {
+		// 		seriesDB.genres[i] = genre
+		// 	}
+		// }
 
-function setFavoriteSeries() {
-  for (let i = 0; i < 2; i++) {
-    const a = prompt(`Oxirgi korgan serialingiz ${i}?`, "");
-    const b = prompt(`Nechi baho berasiz ${i}?`, "");
-    if (a !== null && a !== "" && b !== null && b !== "") {
-      seriesDB.series[a] = b;
-    } else {
-      i--;
-    }
-  }
-}
+		let genres = prompt(
+			"Yaxshi ko'rgan janringizni vergul yordamida yozing!",
+			''
+		)
 
-function detectingLevel() {
-  if (seriesDB.count < 5) {
-    console.log("Siz kam serial koripsiz");
-  } else if (seriesDB.count >= 5 && seriesDB.count < 9) {
-    console.log("Siz classik tomoshabil");
-  } else if (seriesDB.count >= 10) {
-    console.log("Siz serialchi zvezda ekan siz");
-  }
-}
+		while (genres == '' || genres == null) {
+			genres = prompt("Yaxshi ko'rgan janringizni vergul yordamida yozing!", '')
+		}
 
-function writeGenres() {
-  for (let i = 1; i < 4; i++) {
-    const genre = prompt(`Yaxshi ko'rgan janiringiz ${i}?`, "");
-    seriesDB.geners[i] = genre;
-  }
-}
-
-function showDb(isPrivat) {
-  if (!isPrivat) {
-    console.log(seriesDB);
-  } else {
-    console.log("Siz bu yerga kiraolmeysiz");
-  }
+		if (genres) {
+			seriesDB.genres = genres.split(', ')
+			seriesDB.genres.sort()
+		}
+	},
 }
