@@ -411,9 +411,9 @@
 // Object.setPrototypeOf(nexia, suvCars)
 
 // // // // // // // // // // // // // // Dom bilan ishlash
-const box = document.querySelector("#box"),
-  buttons = document.querySelectorAll("button"),
-  circle = document.getElementsByClassName("circle");
+// const box = document.querySelector("#box"),
+//   buttons = document.querySelectorAll("button"),
+//   circle = document.getElementsByClassName("circle");
 
 // console.log(buttons);
 // console.log(circle);
