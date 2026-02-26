@@ -410,6 +410,39 @@
 
 // Object.setPrototypeOf(nexia, suvCars)
 
-
 // // // // // // // // // // // // // // Dom bilan ishlash
+const box = document.querySelector("#box"),
+  buttons = document.querySelectorAll("button"),
+  circle = document.getElementsByClassName("circle");
 
+// console.log(buttons);
+// console.log(circle);
+
+// // for (let i = 0; i < circle.length; i++) {
+// //   circle[i].style.backgroundColor = "black";
+// // }
+
+// // buttons.forEach((item) => {
+// //     item.style.backgroundColor = 'green'
+// // })
+
+// // box.style.backgroundColor = "red"
+
+// // const div = document.createElement("div");
+// div.classList.add("heart");
+// div.style.backgroundColor = "black";
+// document.querySelector(".wrapper").append(div); // boshiga qushadi
+// document.querySelector(".wrapper").prepend(div); // oxiriga qushadi
+
+// circle[0].remove();
+
+// const div = document.createElement("div");
+// div.style.width = "400px";
+// div.style.height = "200px";
+// div.style.color = "white";
+// div.style.backgroundColor = "black";
+
+// div.innerHTML = `<h1>Hello World</h1>`
+// div.textContent = "Hello world" // faqat text bilan ishledi
+// div.insertAdjacentHTML("afterend", "<h1>Hello Fayzula</h1>")
+// document.querySelector('body').append(div)
