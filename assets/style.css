@@ -16,7 +16,7 @@
 }
 .promo__bg {
   height: 60vh;
-  background: url("../assets/img/2.jpg") center center/cover no-repeat;
+  background: url("./img/2.jpg") center center/cover no-repeat;
   background-position: bottom;
   padding: 107px 0 0 61px;
 }
