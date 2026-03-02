@@ -446,3 +446,4 @@
 // div.textContent = "Hello world" // faqat text bilan ishledi
 // div.insertAdjacentHTML("afterend", "<h1>Hello Fayzula</h1>")
 // document.querySelector('body').append(div)
+
