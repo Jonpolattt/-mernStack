@@ -489,26 +489,20 @@
 // 	btns[1].classList.toggle('red')
 // })
 
-const wrapper = document.querySelector(".wrapper"),
-  btn = document.querySelectorAll("button");
+// 23 dars animatsiya va interval
+// const btn = document.querySelector("button");
 
-function hide() {
-  btn.forEach((item) => {
-    item.classList.remove("black");
-  });
-}
-function show(index = 0) {
-  btn[index].classList.add("black");
-}
+// let timerId,
+//   index = 0;
 
-wrapper.addEventListener("click", function (event) {
-  const target = event.target;
-  if (target && target.tagName === "BUTTON") {
-    hide();
-    btn.forEach((item, index) => {
-      if (item == target) {
-        show(index);
-      }
-    });
-  }
-});
+// btn.addEventListener("click", function () {
+//   timerId = setInterval(logger(), 500);
+// });
+
+// function logger() {
+//   if (index === 5) {
+//     clearInterval(timerId);
+//   }
+//   console.log("Hello world");
+//   index++;
+// }
