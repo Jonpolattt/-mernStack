@@ -506,3 +506,24 @@
 //   console.log("Hello world");
 //   index++;
 // }
+
+
+
+
+// // // // // // / /// DATE //////////////
+const now = new Date();
+
+const parse = new Date.parse('2001-08-11')
+
+console.log(parse);
+
+console.log(now);
+
+// now.setHours(25)
+console.log(now.getFullYear());
+console.log(now.getMonth());
+console.log(now.getDate());
+console.log(now.getHours());
+console.log(now.getUTCHours());
+
+
