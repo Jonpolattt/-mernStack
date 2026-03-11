@@ -525,9 +525,15 @@
 
 // 26 dars
 
-const box = document.querySelector(".box");
+// const box = document.querySelector(".box");
 
-// const width = box.clientWidth;
-// const height = box.clientHeight;
+// // const width = box.clientWidth; // Foydalanuvchiga kurinip turgan withd
+// // const height = box.clientHeight; // Foydalanuvchiga kurinip turgan height
 
+// const width = box.offsetWidth;
+// const height = box.offsetHeight;
 
+// console.log(width);
+// console.log(height);
+
+// console.log(box.getBoundingClientRect()); // /// /// //// Hamma top left right bottom qaytaaradi
