@@ -537,3 +537,7 @@
 // console.log(height);
 
 // console.log(box.getBoundingClientRect()); // /// /// //// Hamma top left right bottom qaytaaradi
+
+
+// CONSTUCTOR FUNCTION
+const number = 3;
