@@ -539,5 +539,5 @@
 // console.log(box.getBoundingClientRect()); // /// /// //// Hamma top left right bottom qaytaaradi
 
 
-// CONSTUCTOR FUNCTION
-const number = 3;
+// CONSTUCTOR FUNCTION 28 dars
+// const number = 3;
