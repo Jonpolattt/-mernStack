@@ -614,13 +614,48 @@
 
 // #18. Prototypes (ES6 Classes)
 class Car {
-  constructor(color, brand, maxSpeed) {
+  constructor(color, brand, topSpeed) {
     this.color = color;
     this.brand = brand;
-    this.maxSpeed = maxSpeed;
+    this._topSpeed = topSpeed;
   }
 
-  startEngine() {
-    console.log(`${this.brand} is starting engine`);
+  get info() {
+    return `${this.brand} with ${this.color} color`;
+  }
+
+  get topSpeed() {
+    return this._topSpeed;
+  }
+
+  set topSpeed(speed) {
+    this._topSpeed = speed > 0 ? speed : 0;
   }
 }
+
+const porshe = new Car("yellow", "porshe", 320);
+console.log(porshe.info);
+porshe.topSpeed = -250;
+console.log(porshe.topSpeed);
+
+// Static method
+class User {
+  static allowedEmailDomains = ["gmail.com", "icloud.com"];
+
+  constructor(firstName, lastName) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+  }
+
+  static chekValidEmail(email) {
+    const [, domain] = email.split("@");
+
+    if (User.allowedEmailDomains.includes(domain)) {
+      console.log("Email is  allowed!");
+    } else {
+      console.log("Email is not allowed!");
+    }
+  }
+}
+
+User.chekValidEmail("test@icloud.com");
