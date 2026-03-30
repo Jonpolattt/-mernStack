@@ -659,3 +659,36 @@
 // }
 
 // User.chekValidEmail("test@icloud.com");
+
+// 18 Inheritance
+function Car(brand, color) {
+  this.brand = brand;
+  this.color = color;
+}
+
+Car.prototype.startEngine = function () {
+  console.log(`Starting ${this.brand} wiht ${this.color}`);
+};
+
+Car.prototype.stopEngine = function () {
+  console.log(`Stop ${this.brand} wiht ${this.color}`);
+};
+
+const porshe = new Car("porshe", "black");
+const bwm = new Car("porshe", "black");
+const audi = new Car("porshe", "black");
+
+console.log(porshe);
+console.log(bwm);
+console.log(audi);
+
+porshe.startEngine();
+
+// __proto__
+console.log(porshe.__proto__);
+
+const date = new Date();
+const arr = []
+console.log(date.__proto__);
+console.log(arr.__proto__);
+
