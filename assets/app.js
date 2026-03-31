@@ -770,31 +770,31 @@
 
 // console.log(perosn);
 
-class Perosn {
-  #age;
+// class Perosn {
+//   #age;
 
-  constructor(firstName, lastName, age) {
-    this.firstName = firstName;
-    this.lastName = lastName;
-    this.#age = age;
-  }
+//   constructor(firstName, lastName, age) {
+//     this.firstName = firstName;
+//     this.lastName = lastName;
+//     this.#age = age;
+//   }
 
-  getAge() {
-    return this.#age + 2;
-  }
+//   getAge() {
+//     return this.#age + 2;
+//   }
 
-  setAge(newAge) {
-    if (newAge > 0) {
-      this.#age = newAge;
-    }
-  }
-}
+//   setAge(newAge) {
+//     if (newAge > 0) {
+//       this.#age = newAge;
+//     }
+//   }
+// }
 
-const perosn = new Perosn("Jonpolat", "Ravshanov", 19);
+// const perosn = new Perosn("Jonpolat", "Ravshanov", 19);
 
-console.log(perosn.getAge());
+// console.log(perosn.getAge());
 
-perosn.setAge(100);
-console.log(perosn.getAge);
+// perosn.setAge(100);
+// console.log(perosn.getAge());
 
-console.log(perosn);
+// console.log(perosn);
