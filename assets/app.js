@@ -670,25 +670,76 @@
 // console.log(date.__proto__);
 // console.log(arr.__proto__);
 
-
 // // Static method 19 dars
-class User {
-  static allowedEmailDomains = ["gmail.com", "icloud.com"];
+// class User {
+//   static allowedEmailDomains = ["gmail.com", "icloud.com"];
 
-  constructor(firstName, lastName) {
+//   constructor(firstName, lastName) {
+//     this.firstName = firstName;
+//     this.lastName = lastName;
+//   }
+
+//   static chekValidEmail(email) {
+//     const [, domain] = email.split("@");
+
+//     if (User.allowedEmailDomains.includes(domain)) {
+//       console.log("Email is  allowed!");
+//     } else {
+//       console.log("Email is not allowed!");
+//     }
+//   }
+// }
+
+// User.chekValidEmail("test@icloud.com");
+
+// 20 darsss Inheritance
+
+// In Consturctor function
+// function Perosn(firstName, lastName, age) {
+//   this.firstName = firstName;
+//   this.lastName = lastName;
+//   this.age = age;
+// }
+
+// Perosn.prototype.introduce = function () {
+//   console.log(
+//     `Hello My name is ${this.firstName} and I am ${this.age} years old`,
+//   );
+// };
+
+// function Student(firstName, lastName, age, university) {
+//   Perosn.call(this, firstName, lastName, age);
+//   this.university = university;
+// }
+
+// Student.prototype = Object.create(Perosn.prototype);
+
+// const student = new Student("Jonpolat", "Ravshanov", 19);
+// student.introduce();
+
+// In Es6 Classes
+class Person {
+  constructor(firstName, lastName, age) {
     this.firstName = firstName;
     this.lastName = lastName;
+    this.age = age;
   }
 
-  static chekValidEmail(email) {
-    const [, domain] = email.split("@");
-
-    if (User.allowedEmailDomains.includes(domain)) {
-      console.log("Email is  allowed!");
-    } else {
-      console.log("Email is not allowed!");
-    }
+  introduce() {
+    console.log(
+      `Hello My name is ${this.firstName} and I am ${this.age} years old`,
+    );
   }
 }
 
-User.chekValidEmail("test@icloud.com");
+class Student extends Person {
+  constructor(firstName, lastName, age, university) {
+    super(firstName, lastName, age);
+    this.university = university;
+  }
+}
+
+const person = new Person("Jonpolat", "Ravshanov", 19);
+const student = new Student("Jonpolat", "Ravshanov", 19, "IDU");
+student.introduce();
+console.log(student.university);
