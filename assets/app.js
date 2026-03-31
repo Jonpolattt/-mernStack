@@ -718,28 +718,83 @@
 // student.introduce();
 
 // In Es6 Classes
-class Person {
+// class Person {
+//   constructor(firstName, lastName, age) {
+//     this.firstName = firstName;
+//     this.lastName = lastName;
+//     this.age = age;
+//   }
+
+//   introduce() {
+//     console.log(
+//       `Hello My name is ${this.firstName} and I am ${this.age} years old`,
+//     );
+//   }
+// }
+
+// class Student extends Person {
+//   constructor(firstName, lastName, age, university) {
+//     super(firstName, lastName, age);
+//     this.university = university;
+//   }
+// }
+
+// const person = new Person("Jonpolat", "Ravshanov", 19);
+// const student = new Student("Jonpolat", "Ravshanov", 19, "IDU");
+// student.introduce();
+// console.log(student.university);
+
+// 21 ENCAPSULATION
+// function Perosn(firstName, lastName, age) {
+//   this.firstName = firstName;
+//   this.lastName = lastName;
+//   let _age = age;
+
+//   this.getAge = function () {
+//     return _age + 2;
+//   };
+
+//   this.setAge = function (newAge) {
+//     if (newAge > 0) {
+//       _age = newAge;
+//     }
+//   };
+// }
+
+// const perosn = new Perosn("Jonpolat", "Ravshanov", 19);
+
+// console.log(perosn.getAge());
+
+// perosn.setAge(100);
+// console.log(perosn.getAge());
+
+// console.log(perosn);
+
+class Perosn {
+  #age;
+
   constructor(firstName, lastName, age) {
     this.firstName = firstName;
     this.lastName = lastName;
-    this.age = age;
+    this.#age = age;
   }
 
-  introduce() {
-    console.log(
-      `Hello My name is ${this.firstName} and I am ${this.age} years old`,
-    );
+  getAge() {
+    return this.#age + 2;
   }
-}
 
-class Student extends Person {
-  constructor(firstName, lastName, age, university) {
-    super(firstName, lastName, age);
-    this.university = university;
+  setAge(newAge) {
+    if (newAge > 0) {
+      this.#age = newAge;
+    }
   }
 }
 
-const person = new Person("Jonpolat", "Ravshanov", 19);
-const student = new Student("Jonpolat", "Ravshanov", 19, "IDU");
-student.introduce();
-console.log(student.university);
+const perosn = new Perosn("Jonpolat", "Ravshanov", 19);
+
+console.log(perosn.getAge());
+
+perosn.setAge(100);
+console.log(perosn.getAge);
+
+console.log(perosn);
