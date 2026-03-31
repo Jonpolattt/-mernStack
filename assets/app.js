@@ -638,57 +638,57 @@
 // porshe.topSpeed = -250;
 // console.log(porshe.topSpeed);
 
-// // Static method
-// class User {
-//   static allowedEmailDomains = ["gmail.com", "icloud.com"];
-
-//   constructor(firstName, lastName) {
-//     this.firstName = firstName;
-//     this.lastName = lastName;
-//   }
-
-//   static chekValidEmail(email) {
-//     const [, domain] = email.split("@");
-
-//     if (User.allowedEmailDomains.includes(domain)) {
-//       console.log("Email is  allowed!");
-//     } else {
-//       console.log("Email is not allowed!");
-//     }
-//   }
+// 18 Inheritance
+// function Car(brand, color) {
+//   this.brand = brand;
+//   this.color = color;
 // }
 
-// User.chekValidEmail("test@icloud.com");
+// Car.prototype.startEngine = function () {
+//   console.log(`Starting ${this.brand} wiht ${this.color}`);
+// };
 
-// 18 Inheritance
-function Car(brand, color) {
-  this.brand = brand;
-  this.color = color;
+// Car.prototype.stopEngine = function () {
+//   console.log(`Stop ${this.brand} wiht ${this.color}`);
+// };
+
+// const porshe = new Car("porshe", "black");
+// const bwm = new Car("porshe", "black");
+// const audi = new Car("porshe", "black");
+
+// console.log(porshe);
+// console.log(bwm);
+// console.log(audi);
+
+// porshe.startEngine();
+
+// // __proto__
+// console.log(porshe.__proto__);
+
+// const date = new Date();
+// const arr = []
+// console.log(date.__proto__);
+// console.log(arr.__proto__);
+
+
+// // Static method 19 dars
+class User {
+  static allowedEmailDomains = ["gmail.com", "icloud.com"];
+
+  constructor(firstName, lastName) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+  }
+
+  static chekValidEmail(email) {
+    const [, domain] = email.split("@");
+
+    if (User.allowedEmailDomains.includes(domain)) {
+      console.log("Email is  allowed!");
+    } else {
+      console.log("Email is not allowed!");
+    }
+  }
 }
 
-Car.prototype.startEngine = function () {
-  console.log(`Starting ${this.brand} wiht ${this.color}`);
-};
-
-Car.prototype.stopEngine = function () {
-  console.log(`Stop ${this.brand} wiht ${this.color}`);
-};
-
-const porshe = new Car("porshe", "black");
-const bwm = new Car("porshe", "black");
-const audi = new Car("porshe", "black");
-
-console.log(porshe);
-console.log(bwm);
-console.log(audi);
-
-porshe.startEngine();
-
-// __proto__
-console.log(porshe.__proto__);
-
-const date = new Date();
-const arr = []
-console.log(date.__proto__);
-console.log(arr.__proto__);
-
+User.chekValidEmail("test@icloud.com");
