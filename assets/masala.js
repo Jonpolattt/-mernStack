@@ -80,8 +80,6 @@
 //   },
 // };
 
-
-
 // 1
 // function User(name, age) {
 //   this.name = name;
@@ -123,3 +121,61 @@
 
 // const student = new Student("Jonpo'lat", 90);
 // student.isPassed();
+
+// 4
+// function Product(name, price) {
+//   this.name = name;
+//   this.price = price;
+
+//   this.getDiscountPrice = function (percent) {
+//     return console.log(this.price - (this.price * percent) / 100);
+//   };
+// }
+
+// const phone = new Product("Iphone", 1000);
+// phone.getDiscountPrice(10);
+
+// 5
+// class BankAccount {
+//   constructor(owner, balance) {
+//     this.owner = owner;
+//     this.balance = balance;
+//   }
+
+//   deposit(amount) {
+//     this.balance = this.balance + amount;
+//     console.log(
+//       `Баланс был пополнен на: ${amount}, общий баланс: ${this.balance}`,
+//     );
+//   }
+
+//   withdraw(amount) {
+//     if (this.balance > amount) {
+//       this.balance = this.balance - amount;
+//       console.log(`Было снято: ${amount},  остаток: ${this.balance}`);
+//     } else {
+//       console.log(`Не хватает средства баланс: ${this.balance}`);
+//     }
+//   }
+// }
+
+// const myBank = new BankAccount("John", 1000);
+// myBank.withdraw(900);
+
+function BankAccount(owner, balance) {
+  this.owner = owner;
+  this.balance = balance;
+}
+
+BankAccount.prototype.deposit = function (amount) {
+  this.balance = this.balance + amount;
+  console.log(
+    `Баланс был пополнен на: ${amount}, общий баланс: ${this.balance}`,
+  );
+};
+BankAccount.prototype.withdraw = function (amount) {};
+
+// 6
+class Phone {
+  constructor(brand, battery) {}
+}
