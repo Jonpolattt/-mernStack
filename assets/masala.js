@@ -112,9 +112,9 @@
 
 //   this.isPassed = function () {
 //     if (this.grade >= 60) {
-//       return console.log("Passed");
+//       return "Passed";
 //     } else {
-//       return console.log("Failed");
+//       return "Failed";
 //     }
 //   };
 // }
@@ -126,14 +126,13 @@
 // function Product(name, price) {
 //   this.name = name;
 //   this.price = price;
-
-//   this.getDiscountPrice = function (percent) {
-//     return console.log(this.price - (this.price * percent) / 100);
-//   };
 // }
+// Product.prototype.getDiscountPrice = function (percent) {
+//   return this.price - (this.price * percent) / 100;
+// };
 
 // const phone = new Product("Iphone", 1000);
-// phone.getDiscountPrice(10);
+// console.log(phone.getDiscountPrice(10));
 
 // 5
 // class BankAccount {
@@ -150,7 +149,7 @@
 //   }
 
 //   withdraw(amount) {
-//     if (this.balance > amount) {
+//     if (this.balance >= amount) {
 //       this.balance = this.balance - amount;
 //       console.log(`Было снято: ${amount},  остаток: ${this.balance}`);
 //     } else {
@@ -162,20 +161,46 @@
 // const myBank = new BankAccount("John", 1000);
 // myBank.withdraw(900);
 
-function BankAccount(owner, balance) {
-  this.owner = owner;
-  this.balance = balance;
-}
+// function BankAccount(owner, balance) {
+//   this.owner = owner;
+//   this.balance = balance;
+// }
 
-BankAccount.prototype.deposit = function (amount) {
-  this.balance = this.balance + amount;
-  console.log(
-    `Баланс был пополнен на: ${amount}, общий баланс: ${this.balance}`,
-  );
-};
-BankAccount.prototype.withdraw = function (amount) {};
+// BankAccount.prototype.deposit = function (amount) {
+//   this.balance = this.balance + amount;
+//   console.log(
+//     `Баланс был пополнен на: ${amount}, общий баланс: ${this.balance}`,
+//   );
+// };
+// BankAccount.prototype.withdraw = function (amount) {
+//   if (this.balance > amount) {
+//     this.balance = this.balance - amount;
+//     console.log(`Было снято: ${amount},  остаток: ${this.balance}`);
+//   } else {
+//     console.log(`Не хватает средства баланс: ${this.balance}`);
+//   }
+// };
+// const myBank = new BankAccount("John", 1000);
+// myBank.deposit(900);
 
 // 6
-class Phone {
-  constructor(brand, battery) {}
-}
+// class Phone {
+//   constructor(brand) {
+//     this.brand = brand;
+//     this.battery = 100;
+//   }
+
+//   use() {
+//     if (this.battery >= 10) {
+//       this.battery -= 10;
+//     }
+//     return this.battery;
+//   }
+
+//   charge() {
+//     this.battery = 100;
+//     return this.battery;
+//   }
+// }
+
+// const iphone = new Phone("Iphone", 100);
