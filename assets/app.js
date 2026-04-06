@@ -798,3 +798,64 @@
 // console.log(perosn.getAge());
 
 // console.log(perosn);
+
+// HTTP request
+// Callback
+// setTimeout(() => {
+//   console.log("Hello wordl");
+// }, 3000);
+
+// // // // // // // // // XMLHTTP REQUEST
+// const request = new XMLHttpRequest();
+// request.open("GET", 'https://cat-fact.herokuapp.com/facts');
+// request.send();
+
+// request.addEventListener('load', function () {
+//     const [data] = JSON.parse(this.responseText)
+//     console.log(data);
+// })
+
+// GET
+// fetch("https://jsonplaceholder.typicode.com/posts")
+//   .then((response) => {
+//     response.json();
+//   })
+//   .then((json) => {
+//     console.log(json);
+//   });
+
+//   Post
+// fetch("https://jsonplaceholder.typicode.com/posts", {
+//   method: "POST",
+//   body: JSON.stringify({
+//     title: "My First Post",
+//     body: "Posting with the help of fetch()",
+//     userId: 900,
+//   }),
+//   headers: {
+//     "Content-type": "application/json; charset=UTF-8",
+//   },
+// })
+//   .then((response) => response.json())
+//   .then((json) => console.log(json));
+
+// Put
+// fetch("https://jsonplaceholder.typicode.com/posts/1", {
+//   method: "PUT",
+//   body: JSON.stringify({
+//     id: 1,
+//     title: "My PUT request",
+//     body: "Updating the entire object",
+//     userId: 1,
+//   }),
+//   headers: {
+//     "Content-type": "application/json; charset=UTF-8",
+//   },
+// })
+//   .then((response) => response.json())
+//   .then((json) => console.log(json));
+
+//   Delete
+fetch("https://jsonplaceholder.typicode.com/posts/3", {
+  method: "DELETE",
+});
