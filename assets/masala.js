@@ -204,3 +204,23 @@
 // }
 
 // const iphone = new Phone("Iphone", 100);
+
+// 23 Async, API
+
+// sync kod
+// const obj = {
+//   name: "Jonpo'lat",
+//   age: 18,
+// };
+// alert("Hello World");
+// console.log(obj);
+
+// Async
+const obj1 = {
+  name: "Jonpo'lat",
+  age: 18,
+};
+setTimeout(() => {
+//   alert("Hello World");
+}, 3000);
+console.log(obj1);
