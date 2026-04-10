@@ -856,8 +856,37 @@
 //   .then((json) => console.log(json));
 
 //   Delete
-fetch("https://jsonplaceholder.typicode.com/posts/3", {
-  method: "DELETE",
-});
+// fetch("https://jsonplaceholder.typicode.com/posts/3", {
+//   method: "DELETE",
+// });
+
+// 25 dars Promise
+// let promise = new Promise(function (resolve, reject) {
+//   if (success) {
+//     resolve();
+//   } else {
+//     reject();
+//   }
+// });
+
+// function delay(ms) {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       resolve();
+//     }, ms);
+//   });
+// }
+
+// function showMessageAfterDelay() {
+//   delay(2000).then(() => {
+//     console.log("Hello world after 2 secudns");
+//   });
+// }
+
+// showMessageAfterDelay();
+
+// fetch("https://jsonplaceholder.typicode.com/posts")
+//   .then((response) => response.json())
+//   .then((json) => console.log(json));
 
 
