@@ -889,4 +889,16 @@
 //   .then((response) => response.json())
 //   .then((json) => console.log(json));
 
+const mypromise = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    reject("FOO");
+  }, 200);
+});
 
+mypromise
+  .then((result) => {
+    console.log(result);
+  })
+  .catch((error) => {
+    console.log(error);
+  });
